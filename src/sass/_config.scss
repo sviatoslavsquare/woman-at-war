@@ -1,0 +1,118 @@
+// variables
+$primary-font-family: 'Overpass', sans-serif; // body font-family
+$heading-font-family: 'Neuton', sans-serif;  // heading fony-family
+$primary-font-size: 18px; // body font-size
+$primary-line-height: 1.5; // body line-height
+$primary-color: #373237;
+$background-color: #F5F5F5;
+$black-color: #2D2D2D;
+$white-color: #F0F0F0;
+$blue-color: #5A96D7;
+$dark-blue-color: #3A80CE;
+$grey-color: #D9D9D9;
+
+// common document styles - tags
+body {
+	position: relative;
+	overflow-x: hidden;
+    font-family: $primary-font-family;
+    font-size: $primary-font-size;
+    line-height: $primary-line-height;
+    background: $background-color;
+}
+
+ul,
+ol,
+li {
+	display: block;
+	padding: 0;
+	margin: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+    font-weight: normal;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    color: $blue-color;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+        text-decoration: none;
+        color: $dark-blue-color;
+        svg {
+            color: $dark-blue-color;
+        }
+    }
+    &:active {
+        color: $dark-blue-color;
+    }
+}
+
+picture {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+
+svg {
+    transition: all 0.25s ease-in-out;
+}
+
+// common document styles - class
+.scroll-disabled {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1234px;
+    width: 100%;
+    &--sm {
+        padding: 0 16px;
+        max-width: 1060px;
+    }
+}
+
+.btn {
+    display: block;
+    padding: 19px 17px 17px 17px;
+    min-width: 154px;
+    width: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    color: $white-color;
+    background: $blue-color;
+    border: none;
+    border-radius: 4px;
+    &:focus {
+        outline: none;
+    }
+    &:focus-visible {
+        color: $white-color;
+        background: $dark-blue-color;
+    }
+    &:hover {
+        color: $white-color;
+    }
+    &--sm {
+        padding: 13px 11px 11px 11px;
+    }
+
+    @media screen and (hover: hover) {
+        &:hover {
+            color: $white-color;
+            background: $dark-blue-color;
+        }
+    }
+}
